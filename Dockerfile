@@ -8,7 +8,7 @@ RUN mkdir -p /etc/letsencrypt/webroot
 # Copy the renewal script
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 # Copy the main Let's Encrypt configuration file template
-COPY ./cli.ini.example /etc/letsencrypt/cli.ini.example
+COPY ./cli.ini.example /etc/default/letsencrypt/cli.ini.example
 
 # Share /etc/letsencrypt
 VOLUME ["/etc/letsencrypt"]

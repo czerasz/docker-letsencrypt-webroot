@@ -12,7 +12,7 @@ configuration_file='/etc/letsencrypt/cli.ini'
 # and the configuration file is not shared, create configuration file from template/example
 if [ ! -z "$DOMAINS" ] && [ ! -z "$EMAIL" ] && [ ! -f "$configuration_file" ]; then
   # Rename cli.ini.example (template) to configuration file
-  mv /etc/letsencrypt/cli.ini.example $configuration_file
+  mv /etc/default/letsencrypt/cli.ini.example $configuration_file
   # Replace the email
   sed -i 's/email \= contact\@yourdomain\.com/email \= '"$EMAIL"'/' $configuration_file
   # Replace the domains
