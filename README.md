@@ -6,6 +6,8 @@ This project focuses on the easiness of integration.
 
 This repository extends the **official** Let's Encrypt Docker image on [quay.io](https://quay.io/repository/letsencrypt/letsencrypt). This project adds only the auto-renewal functionality and integration examples on top.
 
+[![](https://imagelayers.io/badge/czerasz/letsencrypt-webroot:latest.svg)](https://imagelayers.io/?images=czerasz/letsencrypt-webroot:latest 'Get your own badge on imagelayers.io')
+
 ## Requirements
 
 - [Docker Engine](https://docs.docker.com/engine/installation/)
