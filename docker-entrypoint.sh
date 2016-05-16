@@ -71,6 +71,8 @@ if [ ! -d "$webroot_pathetc/letsencrypt/webroot" ]; then
 fi
 
 echo "Starting webroot renewal script..."
+echo "Use command:"
+echo "certbot certonly --config $configuration_file --webroot-path $webroot_path $@"
 
 # Pass arguments passed to the script
 certbot certonly --config $configuration_file --webroot-path $webroot_path $@
