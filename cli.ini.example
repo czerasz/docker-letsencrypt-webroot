@@ -1,0 +1,41 @@
+# This is an example of the kind of things you can do in a configuration file.
+# All flags used by the client can be configured here. Run Let's Encrypt with
+# "--help" to learn more about the available options.
+
+# Use a 4096 bit RSA key instead of 2048
+rsa-key-size = 4096
+
+# Uncomment and update to register with the specified e-mail address
+email = contact@yourdomain.com
+
+domains = yourdomain.com,www.yourdomain.com
+
+agree-tos = True
+
+renew-by-default = True
+
+# Always use the staging/testing server - avoids rate limiting
+# server = https://acme-staging.api.letsencrypt.org/directory
+
+# Uncomment to use a text interface instead of ncurses
+# text = True
+
+# This is an example configuration file for developers
+# config-dir = /tmp/le/conf
+# work-dir = /tmp/le/conf
+# logs-dir = /tmp/le/logs
+
+# Enable debugging
+# debug = True
+
+# Unfortunately, it's not possible to specify "verbose" multiple times
+# (correspondingly to -vvvvvv)
+# verbose = True
+
+# Uncomment to use the webroot authenticator. Replace webroot-path with the
+# path to the public_html / webroot folder being served by your web server.
+authenticator = webroot
+
+# webroot-path doesn't need to be defined since it's already
+# specified in docker-entrypoint.sh
+# webroot-path = /etc/letsencrypt/webroot/
