@@ -71,7 +71,7 @@ GET /.well-known/acme-challenge/...
   docker run -it \
              --volume=letsencrypt-data:/etc/letsencrypt \
              --volume=/host/path/to/cli.ini:/etc/letsencrypt/cli.ini:ro \
-             czerasz/letsencrypt-acme-autorenew:latest
+             czerasz/letsencrypt-webroot:latest
   ```
 
   Where `/host/path/to/cli.ini` is the path to the main Let's Encrypt configuration file on the server.
@@ -83,5 +83,5 @@ GET /.well-known/acme-challenge/...
              --volume=letsencrypt-data:/etc/letsencrypt \
              --env='DOMAINS=example.com,www.example.com' \
              --env='EMAIL=contact@example.com' \
-             czerasz/letsencrypt-acme-autorenew:latest
+             czerasz/letsencrypt-webroot:latest
   ```
