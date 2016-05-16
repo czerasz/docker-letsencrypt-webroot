@@ -65,6 +65,11 @@ else
   fi
 fi
 
+# Create webroot directory if it doesn't exist
+if [ ! -d "$webroot_pathetc/letsencrypt/webroot" ]; then
+  mkdir -p $webroot_path
+fi
+
 echo "Starting webroot renewal script..."
 
 # Pass arguments passed to the script
