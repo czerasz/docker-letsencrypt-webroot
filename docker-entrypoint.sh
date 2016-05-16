@@ -9,8 +9,8 @@
 configuration_file='/etc/letsencrypt/cli.ini'
 
 # If the environment variables $DOMAINS and $EMAIL are defined
-# and the configuration file is not shared, create configuration file from template/example
-if [ ! -z "$DOMAINS" ] && [ ! -z "$EMAIL" ] && [ ! -f "$configuration_file" ]; then
+# create configuration file from template/example
+if [ ! -z "$DOMAINS" ] && [ ! -z "$EMAIL" ]; then
   # Rename cli.ini.example (template) to configuration file
   mv /etc/default/letsencrypt/cli.ini.example $configuration_file
   # Replace the email
