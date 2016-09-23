@@ -72,10 +72,10 @@ fi
 
 echo "Starting webroot renewal script..."
 echo "Use command:"
-echo "certbot certonly --config $configuration_file --webroot-path $webroot_path $@"
+echo "certbot certonly --config $configuration_file --webroot-path $webroot_path --noninteractive $@"
 
 # Pass arguments passed to the script
-certbot certonly --config $configuration_file --webroot-path $webroot_path $@
+certbot certonly --config $configuration_file --webroot-path $webroot_path --noninteractive $@
 
 # For testing use:
 # ```
